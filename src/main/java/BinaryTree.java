@@ -4,7 +4,7 @@ public class BinaryTree {
     private final Scanner scanner = new Scanner(System.in);
     private Node root;
 
-    static class Node {
+    private static class Node {
         int value;
         Node left;
         Node right;
@@ -47,17 +47,6 @@ public class BinaryTree {
             node.right = new Node(rightValue);
             populate(node.right);
         }
-    }
-
-    public void display() {
-        display(root, "");
-    }
-
-    private void display(Node node, String indent) {
-        if (node == null) return;
-        System.out.println(indent + node.value);
-        display(node.left, indent + "\t");
-        display(node.right, indent + "\t");
     }
 
     public void prettyDisplay() {
