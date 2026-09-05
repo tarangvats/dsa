@@ -3,9 +3,12 @@ public class BinarySearchTree {
 
     public static void main(String[] args){
         BinarySearchTree bst = new BinarySearchTree();
-        int[] nums = {10, 5, 15, 3, 7, 12, 18};
-        bst.populatedSorted(nums);
+        int[] nums = {10,20,30,40,50,60,70,80,90};
+        bst.populate(nums);
         bst.display();
+        bst.inOrder(bst.root);
+        System.out.println(bst.height(bst.root));
+
     }
 
     public static class Node{
@@ -103,6 +106,27 @@ public class BinarySearchTree {
         populatedSorted(nums, mid +1, end);
 
     }
+
+    public void preOrder(){
+        preOrder(root);
+    }
+    private void preOrder(Node node){
+        if(node==null)
+            return;
+        System.out.println(node.getValue());
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    public void inOrder(Node node){
+        if(node==null)
+            return;
+        inOrder(node.left);
+        System.out.println(node.getValue());
+        inOrder(node.right);
+    }
+
+
 
     public BinarySearchTree(){
 
