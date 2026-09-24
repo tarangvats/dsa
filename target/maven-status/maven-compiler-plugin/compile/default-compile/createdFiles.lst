@@ -1,2 +1,10 @@
 BinaryTree$Node.class
+SegmentTreeKushal$Node.class
+AVLTree$Node.class
+AVLTree.class
+SegmentTreeKushal.class
 BinaryTree.class
+SegmentTree.class
+BinarySearchTree.class
+SegmentTree$Node.class
+BinarySearchTree$Node.class
